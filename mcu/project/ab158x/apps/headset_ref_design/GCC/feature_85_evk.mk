@@ -226,7 +226,7 @@ AIR_MS_TEAMS_ENABLE = n
 ######  System ######
 
 # This option is used to enable fast pair.
-AIR_BT_FAST_PAIR_ENABLE = y
+AIR_BT_FAST_PAIR_ENABLE = n
 
 # This option is used to enable fast pair SASS.
 # Dependency: AIR_BT_FAST_PAIR_ENABLE must be enabled when this option is set to y.
