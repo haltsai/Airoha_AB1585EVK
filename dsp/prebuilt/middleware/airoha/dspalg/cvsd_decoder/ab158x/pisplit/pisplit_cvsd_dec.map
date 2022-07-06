@@ -1,0 +1,553 @@
+
+Linker script and memory map
+
+LOAD C:/usr/xtensa/XtDevTools/install/builds/RI-2020.4-win32/Hifi5_MT2833_FDI/xtensa-elf/lib/xcc/crti.o
+LOAD C:/usr/xtensa/XtDevTools/install/builds/RI-2020.4-win32/Hifi5_MT2833_FDI/xtensa-elf/lib/xcc/crtbegin.o
+LOAD Build/source/source/main_dec_lib.picsl.o
+LOAD Build/source/source/cvsd_common.picsl.o
+LOAD Build/source/source/cvsd_dec.picsl.o
+LOAD Build/source/source/cvsd_fir.picsl.o
+LOAD Build/source/source/cvsd_rom.picsl.o
+LOAD Build/source/source/cvsd_xt_memory.picsl.o
+LOAD C:/usr/xtensa/XtDevTools/install/builds/RI-2020.4-win32/Hifi5_MT2833_FDI/xtensa-elf/lib/xcc/\libgcc.a
+LOAD C:/usr/xtensa/XtDevTools/install/builds/RI-2020.4-win32/Hifi5_MT2833_FDI/xtensa-elf/lib/xcc/\libgcc.a
+LOAD C:/usr/xtensa/XtDevTools/install/builds/RI-2020.4-win32/Hifi5_MT2833_FDI/xtensa-elf/lib/xcc/crtend.o
+LOAD C:/usr/xtensa/XtDevTools/install/builds/RI-2020.4-win32/Hifi5_MT2833_FDI/xtensa-elf/lib/xcc/crtn.o
+
+.text           0x00000000      0xec9
+                0x00000000                _text_start = ABSOLUTE (.)
+ *(.got.plt* .plt*)
+ .got.plt       0x00000000        0x0 C:/usr/xtensa/XtDevTools/install/builds/RI-2020.4-win32/Hifi5_MT2833_FDI/xtensa-elf/lib/xcc/crti.o
+                0x00000000                _GLOBAL_OFFSET_TABLE_
+ .init.literal  0x00000000        0x4 C:/usr/xtensa/XtDevTools/install/builds/RI-2020.4-win32/Hifi5_MT2833_FDI/xtensa-elf/lib/xcc/crtbegin.o
+ .init.literal  0x00000004        0x4 C:/usr/xtensa/XtDevTools/install/builds/RI-2020.4-win32/Hifi5_MT2833_FDI/xtensa-elf/lib/xcc/crtend.o
+ .literal       0x00000008       0x18 C:/usr/xtensa/XtDevTools/install/builds/RI-2020.4-win32/Hifi5_MT2833_FDI/xtensa-elf/lib/xcc/crtbegin.o
+                                         0x24 (size before relaxing)
+ .literal       0x00000020       0x20 Build/source/source/main_dec_lib.picsl.o
+ .literal       0x00000040       0x24 Build/source/source/cvsd_common.picsl.o
+                                         0x44 (size before relaxing)
+ .literal       0x00000064       0x10 Build/source/source/cvsd_dec.picsl.o
+ .literal       0x00000074       0x38 Build/source/source/cvsd_fir.picsl.o
+                                         0x68 (size before relaxing)
+ .literal       0x000000ac        0x8 C:/usr/xtensa/XtDevTools/install/builds/RI-2020.4-win32/Hifi5_MT2833_FDI/xtensa-elf/lib/xcc/crtend.o
+ .fini.literal  0x000000b4        0x4 C:/usr/xtensa/XtDevTools/install/builds/RI-2020.4-win32/Hifi5_MT2833_FDI/xtensa-elf/lib/xcc/crtbegin.o
+ .plt           0x00000000        0x0 C:/usr/xtensa/XtDevTools/install/builds/RI-2020.4-win32/Hifi5_MT2833_FDI/xtensa-elf/lib/xcc/crti.o
+ *(.init.literal)
+ *(.init)
+ .init          0x000000b8        0x3 C:/usr/xtensa/XtDevTools/install/builds/RI-2020.4-win32/Hifi5_MT2833_FDI/xtensa-elf/lib/xcc/crti.o
+                0x000000b8                _init
+ .init          0x000000bb        0x8 C:/usr/xtensa/XtDevTools/install/builds/RI-2020.4-win32/Hifi5_MT2833_FDI/xtensa-elf/lib/xcc/crtbegin.o
+ .init          0x000000c3        0x8 C:/usr/xtensa/XtDevTools/install/builds/RI-2020.4-win32/Hifi5_MT2833_FDI/xtensa-elf/lib/xcc/crtend.o
+ .init          0x000000cb        0x2 C:/usr/xtensa/XtDevTools/install/builds/RI-2020.4-win32/Hifi5_MT2833_FDI/xtensa-elf/lib/xcc/crtn.o
+ *(.literal .text .stub .literal.* .text.* .gnu.linkonce.literal.* .gnu.linkonce.t.*.literal .gnu.linkonce.t.*)
+ *fill*         0x000000cd        0x3 00000000
+ .text          0x000000d0       0x55 C:/usr/xtensa/XtDevTools/install/builds/RI-2020.4-win32/Hifi5_MT2833_FDI/xtensa-elf/lib/xcc/crtbegin.o
+ *fill*         0x00000125        0x3 00000000
+ .text          0x00000128       0x2e Build/source/source/main_dec_lib.picsl.o
+                0x00000128                _start
+ *fill*         0x00000156        0xa 00000000
+ .text          0x00000160      0x2b8 Build/source/source/cvsd_common.picsl.o
+                0x00000160                get_cvsd_version
+                0x00000168                cvsd_codec_init
+                0x00000184                cvsd_encode_init
+                0x0000019c                cvsd_decode_init
+                0x000001b4                cvsd_encode_process
+                0x000002e0                cvsd_decode_process
+ .text          0x00000418       0x91 Build/source/source/cvsd_dec.picsl.o
+                0x00000418                _CVSD_Decoder_Init
+                0x00000450                _CVSD_Decoder
+ *fill*         0x000004a9        0x7 00000000
+ .text          0x000004b0      0x96f Build/source/source/cvsd_fir.picsl.o
+                0x000004b0                cvsd_src_up_sampling_mono_process_1
+                0x00000818                cvsd_src_up_sampling_mono_process_2
+                0x00000964                cvsd_src_up_sampling_mono_process_3
+                0x00000aac                cvsd_src_dn_sampling_mono_process_1
+                0x00000c50                cvsd_src_dn_sampling_mono_process_2
+                0x00000d40                cvsd_src_up_sampling_init
+                0x00000d70                cvsd_src_dn_sampling_init
+                0x00000da0                cvsd_src_up_sampling_process
+                0x00000dec                cvsd_src_dn_sampling_process
+ *fill*         0x00000e1f        0x1 00000000
+ .text          0x00000e20       0x1e C:/usr/xtensa/XtDevTools/install/builds/RI-2020.4-win32/Hifi5_MT2833_FDI/xtensa-elf/lib/xcc/crtend.o
+ .text          0x00000e3e        0x0 C:/usr/xtensa/XtDevTools/install/builds/RI-2020.4-win32/Hifi5_MT2833_FDI/xtensa-elf/lib/xcc/crti.o
+ *fill*         0x00000e3e        0x0 00000000
+ *fill*         0x00000e3e        0x0 00000000
+ *fill*         0x00000e3e        0x0 00000000
+ *fill*         0x00000e3e        0x0 00000000
+ *fill*         0x00000e3e        0x0 00000000
+ *fill*         0x00000e3e        0x0 00000000
+ *fill*         0x00000e3e        0x0 00000000
+ .text          0x00000e3e        0x0 Build/source/source/cvsd_rom.picsl.o
+ *fill*         0x00000e3e        0x2 00000000
+ .literal       0x00000e40        0x0 Build/source/source/cvsd_xt_memory.picsl.o
+ .text          0x00000e40       0x7c Build/source/source/cvsd_xt_memory.picsl.o
+                0x00000e40                xt_hifi5_cvsd_memset
+                0x00000e64                xt_hifi5_cvsd_memcpy
+ *fill*         0x00000ebc        0x0 00000000
+ .text          0x00000ebc        0x0 C:/usr/xtensa/XtDevTools/install/builds/RI-2020.4-win32/Hifi5_MT2833_FDI/xtensa-elf/lib/xcc/crtn.o
+ *(.clib.literal .clib.text)
+ *(.text.*personality*)
+ *(.gnu.warning)
+ *(.fini.literal)
+ *fill*         0x00000ebc        0x0 00000000
+ *(.fini)
+ .fini          0x00000ebc        0x3 C:/usr/xtensa/XtDevTools/install/builds/RI-2020.4-win32/Hifi5_MT2833_FDI/xtensa-elf/lib/xcc/crti.o
+                0x00000ebc                _fini
+ .fini          0x00000ebf        0x8 C:/usr/xtensa/XtDevTools/install/builds/RI-2020.4-win32/Hifi5_MT2833_FDI/xtensa-elf/lib/xcc/crtbegin.o
+ .fini          0x00000ec7        0x2 C:/usr/xtensa/XtDevTools/install/builds/RI-2020.4-win32/Hifi5_MT2833_FDI/xtensa-elf/lib/xcc/crtn.o
+                0x00000ec9                PROVIDE (__etext, .)
+                0x00000ec9                PROVIDE (_etext, .)
+                0x00000ec9                PROVIDE (etext, .)
+
+.dynamic        0x00000ecc       0xa8
+                0x00000ecc        0x4 LONG 0x70000002
+                0x00000ed0        0x4 LONG 0x0 _text_start
+ *(.dynamic)
+ .dynamic       0x00000ed4       0xa0 C:/usr/xtensa/XtDevTools/install/builds/RI-2020.4-win32/Hifi5_MT2833_FDI/xtensa-elf/lib/xcc/crti.o
+                0x00000ed4                _DYNAMIC
+
+.hash           0x00000f74       0x28
+ *(.hash)
+ .hash          0x00000f74       0x28 C:/usr/xtensa/XtDevTools/install/builds/RI-2020.4-win32/Hifi5_MT2833_FDI/xtensa-elf/lib/xcc/crti.o
+
+.dynsym         0x00000f9c       0x50
+ *(.dynsym)
+ .dynsym        0x00000f9c       0x50 C:/usr/xtensa/XtDevTools/install/builds/RI-2020.4-win32/Hifi5_MT2833_FDI/xtensa-elf/lib/xcc/crti.o
+
+.dynstr         0x00000fec       0x25
+ *(.dynstr)
+ .dynstr        0x00000fec       0x25 C:/usr/xtensa/XtDevTools/install/builds/RI-2020.4-win32/Hifi5_MT2833_FDI/xtensa-elf/lib/xcc/crti.o
+
+.gnu.version    0x00001012        0x0
+ *(.gnu.version)
+ .gnu.version   0x00000000        0x0 C:/usr/xtensa/XtDevTools/install/builds/RI-2020.4-win32/Hifi5_MT2833_FDI/xtensa-elf/lib/xcc/crti.o
+
+.gnu.version_d  0x00001014        0x0
+ *(.gnu.version_d)
+ .gnu.version_d
+                0x00000000        0x0 C:/usr/xtensa/XtDevTools/install/builds/RI-2020.4-win32/Hifi5_MT2833_FDI/xtensa-elf/lib/xcc/crti.o
+
+.gnu.version_r  0x00001014        0x0
+ *(.gnu.version_r)
+ .gnu.version_r
+                0x00000000        0x0 C:/usr/xtensa/XtDevTools/install/builds/RI-2020.4-win32/Hifi5_MT2833_FDI/xtensa-elf/lib/xcc/crti.o
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text .rel.text.* .rel.gnu.linkonce.t.*)
+
+.rela.text
+ *(.rela.text .rela.text.* .rela.gnu.linkonce.t.*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata .rel.rodata.* .rel.gnu.linkonce.r.*)
+
+.rela.rodata
+ *(.rela.rodata .rela.rodata.* .rela.gnu.linkonce.r.*)
+
+.rel.data.rel.ro
+ *(.rel.data.rel.ro*)
+
+.rela.data.rel.ro
+ *(.rel.data.rel.ro*)
+
+.rel.data
+ *(.rel.data .rel.data.* .rel.gnu.linkonce.d.*)
+
+.rela.data
+ *(.rela.data .rela.data.* .rela.gnu.linkonce.d.*)
+
+.rel.tdata
+ *(.rel.tdata .rel.tdata.* .rel.gnu.linkonce.td.*)
+
+.rela.tdata
+ *(.rela.tdata .rela.tdata.* .rela.gnu.linkonce.td.*)
+
+.rel.tbss
+ *(.rel.tbss .rel.tbss.* .rel.gnu.linkonce.tb.*)
+
+.rela.tbss
+ *(.rela.tbss .rela.tbss.* .rela.gnu.linkonce.tb.*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got       0x00001014      0x1ec
+ *(.rela.got)
+ .rela.got      0x00001014      0x1ec C:/usr/xtensa/XtDevTools/install/builds/RI-2020.4-win32/Hifi5_MT2833_FDI/xtensa-elf/lib/xcc/crti.o
+
+.rel.bss
+ *(.rel.bss .rel.bss.* .rel.gnu.linkonce.b.*)
+
+.rela.bss
+ *(.rela.bss .rela.bss.* .rela.gnu.linkonce.b.*)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt       0x00001200        0x0
+ *(.rela.plt)
+ .rela.plt      0x00000000        0x0 C:/usr/xtensa/XtDevTools/install/builds/RI-2020.4-win32/Hifi5_MT2833_FDI/xtensa-elf/lib/xcc/crti.o
+
+.got            0x00001200        0x4
+ *(.got)
+ .got           0x00001200        0x4 C:/usr/xtensa/XtDevTools/install/builds/RI-2020.4-win32/Hifi5_MT2833_FDI/xtensa-elf/lib/xcc/crti.o
+
+.got.loc        0x00001204       0x48
+ *(.got.loc)
+ .got.loc       0x00001204       0x48 C:/usr/xtensa/XtDevTools/install/builds/RI-2020.4-win32/Hifi5_MT2833_FDI/xtensa-elf/lib/xcc/crti.o
+
+.clib.rodata
+ *(.clib.rodata)
+
+.rtos.rodata
+ *(.rtos.rodata)
+
+.clib.data
+ *(.clib.data)
+
+.rtos.data
+ *(.rtos.data)
+
+.clib.percpu.data
+ *(.clib.percpu.data)
+
+.rtos.percpu.data
+ *(.rtos.percpu.data)
+
+.rodata         0x00001250       0xf0
+ *(.rodata .rodata.* .gnu.linkonce.r.*)
+ .rodata.str1.4
+                0x00001250       0x48 Build/source/source/main_dec_lib.picsl.o
+ *fill*         0x00001298        0x8 
+ .rodata        0x000012a0       0xa0 Build/source/source/cvsd_rom.picsl.o
+                0x000012a0                cvsd_src_down_sampling_coef_1
+                0x000012c0                cvsd_src_down_sampling_coef_2
+                0x000012e0                cvsd_src_down_sampling_coef_3
+                0x00001300                cvsd_src_up_sampling_coef_1
+                0x00001320                cvsd_src_up_sampling_coef_2
+                0x00001330                cvsd_BitReverseTable16
+
+.interp         0x00001340        0xb
+ .interp        0x00001340        0xb C:/usr/xtensa/XtDevTools/install/builds/RI-2020.4-win32/Hifi5_MT2833_FDI/xtensa-elf/lib/xcc/crti.o
+
+.rodata1
+ *(.rodata1)
+
+.xt_except_table
+ *(.xt_except_table)
+
+.eh_frame       0x0000134c        0x4
+ *(.eh_frame)
+ .eh_frame      0x0000134c        0x0 C:/usr/xtensa/XtDevTools/install/builds/RI-2020.4-win32/Hifi5_MT2833_FDI/xtensa-elf/lib/xcc/crtbegin.o
+ .eh_frame      0x0000134c        0x4 C:/usr/xtensa/XtDevTools/install/builds/RI-2020.4-win32/Hifi5_MT2833_FDI/xtensa-elf/lib/xcc/crtend.o
+
+.gcc_except_table
+ *(.gcc_except_table)
+ *(.gcc_except_table.*)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table)
+ *(.gcc_except_table.*)
+
+.tdata
+ *(.tdata .tdata.* .gnu.linkonce.td.*)
+
+.tbss
+ *(.tbss .tbss.* .gnu.linkonce.tb.*)
+ *(.tcommon)
+                0x00001350                . = ALIGN (0x4)
+                0x00001350                PROVIDE (__preinit_array_start, .)
+
+.preinit_array
+ *(.preinit_array)
+                0x00001350                PROVIDE (__preinit_array_end, .)
+                0x00001350                PROVIDE (__init_array_start, .)
+
+.init_array
+ *(.init_array)
+                0x00001350                PROVIDE (__init_array_end, .)
+                0x00001350                PROVIDE (__fini_array_start, .)
+
+.fini_array
+ *(.fini_array)
+                0x00001350                PROVIDE (__fini_array_end, .)
+
+.ctors          0x00001350        0x8
+ *crtbegin*.o(.ctors)
+ .ctors         0x00001350        0x4 C:/usr/xtensa/XtDevTools/install/builds/RI-2020.4-win32/Hifi5_MT2833_FDI/xtensa-elf/lib/xcc/crtbegin.o
+ *(EXCLUDE_FILE(*crtend*.o) .ctors)
+ *(SORT(.ctors.*))
+ *(.ctors)
+ .ctors         0x00001354        0x4 C:/usr/xtensa/XtDevTools/install/builds/RI-2020.4-win32/Hifi5_MT2833_FDI/xtensa-elf/lib/xcc/crtend.o
+
+.dtors          0x00001358        0x8
+ *crtbegin*.o(.dtors)
+ .dtors         0x00001358        0x4 C:/usr/xtensa/XtDevTools/install/builds/RI-2020.4-win32/Hifi5_MT2833_FDI/xtensa-elf/lib/xcc/crtbegin.o
+ *(EXCLUDE_FILE(*crtend*.o) .dtors)
+ *(SORT(.dtors.*))
+ *(.dtors)
+ .dtors         0x0000135c        0x4 C:/usr/xtensa/XtDevTools/install/builds/RI-2020.4-win32/Hifi5_MT2833_FDI/xtensa-elf/lib/xcc/crtend.o
+
+.jcr
+ *(.jcr)
+
+.data.rel.ro
+ *(.data.rel.ro.local)
+ *(.data.rel.ro*)
+
+.data           0x00001360       0x1c
+ *(.data .data.* .gnu.linkonce.d.*)
+ .data          0x00001360        0x0 C:/usr/xtensa/XtDevTools/install/builds/RI-2020.4-win32/Hifi5_MT2833_FDI/xtensa-elf/lib/xcc/crti.o
+ .data          0x00001360        0x8 C:/usr/xtensa/XtDevTools/install/builds/RI-2020.4-win32/Hifi5_MT2833_FDI/xtensa-elf/lib/xcc/crtbegin.o
+                0x00001360                __dso_handle
+ *fill*         0x00001368        0x8 
+ .data          0x00001370        0xc Build/source/source/main_dec_lib.picsl.o
+                0x00001370                export_parameter_array
+ .data          0x0000137c        0x0 Build/source/source/cvsd_common.picsl.o
+ .data          0x0000137c        0x0 Build/source/source/cvsd_dec.picsl.o
+ .data          0x0000137c        0x0 Build/source/source/cvsd_fir.picsl.o
+ .data          0x0000137c        0x0 Build/source/source/cvsd_rom.picsl.o
+ .data          0x0000137c        0x0 Build/source/source/cvsd_xt_memory.picsl.o
+ .data          0x0000137c        0x0 C:/usr/xtensa/XtDevTools/install/builds/RI-2020.4-win32/Hifi5_MT2833_FDI/xtensa-elf/lib/xcc/crtend.o
+ .data          0x0000137c        0x0 C:/usr/xtensa/XtDevTools/install/builds/RI-2020.4-win32/Hifi5_MT2833_FDI/xtensa-elf/lib/xcc/crtn.o
+ *(.gnu.linkonce.d.*personality*)
+
+.data1
+ *(.data1)
+
+.xt_except_desc
+ *(.xt_except_desc .gnu.linkonce.h.*)
+ *(.xt_except_desc_end)
+                0x0000137c                _edata = .
+                0x0000137c                PROVIDE (edata, .)
+                0x0000137c                __bss_start = .
+
+.bss            0x0000137c       0x20
+ *(.dynbss)
+ *(.bss .bss.* .gnu.linkonce.b.*)
+ .bss           0x0000137c        0x0 C:/usr/xtensa/XtDevTools/install/builds/RI-2020.4-win32/Hifi5_MT2833_FDI/xtensa-elf/lib/xcc/crti.o
+ .bss           0x0000137c       0x1c C:/usr/xtensa/XtDevTools/install/builds/RI-2020.4-win32/Hifi5_MT2833_FDI/xtensa-elf/lib/xcc/crtbegin.o
+ .bss           0x00001398        0x4 Build/source/source/main_dec_lib.picsl.o
+                0x00001398                printf_ptr
+ .bss           0x0000139c        0x0 Build/source/source/cvsd_common.picsl.o
+ .bss           0x0000139c        0x0 Build/source/source/cvsd_dec.picsl.o
+ .bss           0x0000139c        0x0 Build/source/source/cvsd_fir.picsl.o
+ .bss           0x0000139c        0x0 Build/source/source/cvsd_rom.picsl.o
+ .bss           0x0000139c        0x0 Build/source/source/cvsd_xt_memory.picsl.o
+ .bss           0x0000139c        0x0 C:/usr/xtensa/XtDevTools/install/builds/RI-2020.4-win32/Hifi5_MT2833_FDI/xtensa-elf/lib/xcc/crtend.o
+ .bss           0x0000139c        0x0 C:/usr/xtensa/XtDevTools/install/builds/RI-2020.4-win32/Hifi5_MT2833_FDI/xtensa-elf/lib/xcc/crtn.o
+ *(.clib.bss)
+ *(.clib.percpu.bss)
+ *(.rtos.bss)
+ *(.rtos.percpu.bss)
+ *(COMMON)
+                0x0000139c                . = ALIGN (0x4)
+                0x0000139c                . = ALIGN (0x4)
+                0x0000139c                _end = .
+                0x0000139c                PROVIDE (end, .)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x00000000      0x2b4
+ *(.comment)
+ .comment       0x00000000       0x97 C:/usr/xtensa/XtDevTools/install/builds/RI-2020.4-win32/Hifi5_MT2833_FDI/xtensa-elf/lib/xcc/crtbegin.o
+                                         0x98 (size before relaxing)
+ .comment       0x00000097       0x5c Build/source/source/main_dec_lib.picsl.o
+                                         0x5d (size before relaxing)
+ .comment       0x000000f3       0x5b Build/source/source/cvsd_common.picsl.o
+                                         0x5c (size before relaxing)
+ .comment       0x0000014e       0x58 Build/source/source/cvsd_dec.picsl.o
+                                         0x59 (size before relaxing)
+ .comment       0x000001a6       0x58 Build/source/source/cvsd_fir.picsl.o
+                                         0x59 (size before relaxing)
+ .comment       0x000001fe       0x58 Build/source/source/cvsd_rom.picsl.o
+                                         0x59 (size before relaxing)
+ .comment       0x00000256       0x5e Build/source/source/cvsd_xt_memory.picsl.o
+                                         0x5f (size before relaxing)
+ .comment       0x00000000       0x98 C:/usr/xtensa/XtDevTools/install/builds/RI-2020.4-win32/Hifi5_MT2833_FDI/xtensa-elf/lib/xcc/crtend.o
+
+.xtensa.info    0x00000000      0x1ec
+ .xtensa.info   0x00000000      0x1ec C:/usr/xtensa/XtDevTools/install/builds/RI-2020.4-win32/Hifi5_MT2833_FDI/xtensa-elf/lib/xcc/crti.o
+ .xtensa.info   0x00000000        0x0 C:/usr/xtensa/XtDevTools/install/builds/RI-2020.4-win32/Hifi5_MT2833_FDI/xtensa-elf/lib/xcc/crtbegin.o
+ .xtensa.info   0x00000000        0x0 Build/source/source/main_dec_lib.picsl.o
+ .xtensa.info   0x00000000        0x0 Build/source/source/cvsd_common.picsl.o
+ .xtensa.info   0x00000000        0x0 Build/source/source/cvsd_dec.picsl.o
+ .xtensa.info   0x00000000        0x0 Build/source/source/cvsd_fir.picsl.o
+ .xtensa.info   0x00000000        0x0 Build/source/source/cvsd_rom.picsl.o
+ .xtensa.info   0x00000000        0x0 Build/source/source/cvsd_xt_memory.picsl.o
+ .xtensa.info   0x00000000        0x0 C:/usr/xtensa/XtDevTools/install/builds/RI-2020.4-win32/Hifi5_MT2833_FDI/xtensa-elf/lib/xcc/crtend.o
+ .xtensa.info   0x00000000        0x0 C:/usr/xtensa/XtDevTools/install/builds/RI-2020.4-win32/Hifi5_MT2833_FDI/xtensa-elf/lib/xcc/crtn.o
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000       0xa0
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x20 Build/source/source/main_dec_lib.picsl.o
+ .debug_aranges
+                0x00000020       0x20 Build/source/source/cvsd_common.picsl.o
+ .debug_aranges
+                0x00000040       0x20 Build/source/source/cvsd_dec.picsl.o
+ .debug_aranges
+                0x00000060       0x20 Build/source/source/cvsd_fir.picsl.o
+ .debug_aranges
+                0x00000080       0x20 Build/source/source/cvsd_xt_memory.picsl.o
+
+.debug_pubnames
+                0x00000000      0x386
+ *(.debug_pubnames)
+ .debug_pubnames
+                0x00000000       0x47 Build/source/source/main_dec_lib.picsl.o
+ .debug_pubnames
+                0x00000047       0x95 Build/source/source/cvsd_common.picsl.o
+ .debug_pubnames
+                0x000000dc       0x3b Build/source/source/cvsd_dec.picsl.o
+ .debug_pubnames
+                0x00000117      0x158 Build/source/source/cvsd_fir.picsl.o
+ .debug_pubnames
+                0x0000026f       0xd3 Build/source/source/cvsd_rom.picsl.o
+ .debug_pubnames
+                0x00000342       0x44 Build/source/source/cvsd_xt_memory.picsl.o
+
+.debug_info     0x00000000     0x1c0e
+ *(.debug_info .gnu.linkonce.wi.*)
+ .debug_info    0x00000000      0x1c0 Build/source/source/main_dec_lib.picsl.o
+ .debug_info    0x000001c0      0x67f Build/source/source/cvsd_common.picsl.o
+ .debug_info    0x0000083f      0x36e Build/source/source/cvsd_dec.picsl.o
+ .debug_info    0x00000bad      0xcdd Build/source/source/cvsd_fir.picsl.o
+ .debug_info    0x0000188a      0x1e7 Build/source/source/cvsd_rom.picsl.o
+ .debug_info    0x00001a71      0x19d Build/source/source/cvsd_xt_memory.picsl.o
+
+.debug_abbrev   0x00000000      0x519
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000       0xaa Build/source/source/main_dec_lib.picsl.o
+ .debug_abbrev  0x000000aa       0xdc Build/source/source/cvsd_common.picsl.o
+ .debug_abbrev  0x00000186       0xf0 Build/source/source/cvsd_dec.picsl.o
+ .debug_abbrev  0x00000276      0x193 Build/source/source/cvsd_fir.picsl.o
+ .debug_abbrev  0x00000409       0x6e Build/source/source/cvsd_rom.picsl.o
+ .debug_abbrev  0x00000477       0xa2 Build/source/source/cvsd_xt_memory.picsl.o
+
+.debug_line     0x00000000      0x965
+ *(.debug_line)
+ .debug_line    0x00000000       0x8e Build/source/source/main_dec_lib.picsl.o
+ .debug_line    0x0000008e      0x23b Build/source/source/cvsd_common.picsl.o
+ .debug_line    0x000002c9       0xa8 Build/source/source/cvsd_dec.picsl.o
+ .debug_line    0x00000371      0x4f0 Build/source/source/cvsd_fir.picsl.o
+ .debug_line    0x00000861       0x3e Build/source/source/cvsd_rom.picsl.o
+ .debug_line    0x0000089f       0xc6 Build/source/source/cvsd_xt_memory.picsl.o
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str
+ *(.debug_str)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.xt.lit         0x00000000       0x48
+ *(.xt.lit .xt.lit.* .gnu.linkonce.p.*)
+ .xt.lit.plt    0x00000000        0x0 C:/usr/xtensa/XtDevTools/install/builds/RI-2020.4-win32/Hifi5_MT2833_FDI/xtensa-elf/lib/xcc/crti.o
+ .xt.lit        0x00000000       0x18 C:/usr/xtensa/XtDevTools/install/builds/RI-2020.4-win32/Hifi5_MT2833_FDI/xtensa-elf/lib/xcc/crtbegin.o
+ .xt.lit        0x00000018        0x8 Build/source/source/main_dec_lib.picsl.o
+ .xt.lit        0x00000020        0x8 Build/source/source/cvsd_common.picsl.o
+ .xt.lit        0x00000028        0x8 Build/source/source/cvsd_dec.picsl.o
+ .xt.lit        0x00000030        0x8 Build/source/source/cvsd_fir.picsl.o
+ .xt.lit        0x00000038       0x10 C:/usr/xtensa/XtDevTools/install/builds/RI-2020.4-win32/Hifi5_MT2833_FDI/xtensa-elf/lib/xcc/crtend.o
+
+.xt.insn
+ *(.xt.insn .gnu.linkonce.x.*)
+
+.xt.prop        0x00000000      0x690
+ *(.xt.prop .gnu.linkonce.prop.*)
+ .xt.prop       0x00000000       0x18 C:/usr/xtensa/XtDevTools/install/builds/RI-2020.4-win32/Hifi5_MT2833_FDI/xtensa-elf/lib/xcc/crti.o
+ .xt.prop       0x00000018       0xc0 C:/usr/xtensa/XtDevTools/install/builds/RI-2020.4-win32/Hifi5_MT2833_FDI/xtensa-elf/lib/xcc/crtbegin.o
+                                         0xf0 (size before relaxing)
+ .xt.prop       0x000000d8       0x24 Build/source/source/main_dec_lib.picsl.o
+                                         0x3c (size before relaxing)
+ .xt.prop       0x000000fc      0x1d4 Build/source/source/cvsd_common.picsl.o
+ .xt.prop       0x000002d0       0x60 Build/source/source/cvsd_dec.picsl.o
+ .xt.prop       0x00000330      0x180 Build/source/source/cvsd_fir.picsl.o
+ .xt.prop       0x000004b0       0x78 Build/source/source/cvsd_rom.picsl.o
+ .xt.prop       0x00000528       0xe4 Build/source/source/cvsd_xt_memory.picsl.o
+                                         0xf0 (size before relaxing)
+ .xt.prop       0x0000060c       0x54 C:/usr/xtensa/XtDevTools/install/builds/RI-2020.4-win32/Hifi5_MT2833_FDI/xtensa-elf/lib/xcc/crtend.o
+                                         0x6c (size before relaxing)
+ .xt.prop       0x00000660       0x30 C:/usr/xtensa/XtDevTools/install/builds/RI-2020.4-win32/Hifi5_MT2833_FDI/xtensa-elf/lib/xcc/crtn.o
+
+/DISCARD/
+ *(.note.GNU-stack)
+OUTPUT(Build/lib/pisplit_cvsd_dec_position_independent.splitload.lib elf32-xtensa-le)
+
+Memory Configuration
+
+Name             Origin          Length          Used            Unused          Attributes
+*default*        0x00000000      0xffffffff      

@@ -1,0 +1,489 @@
+
+Discarded input sections
+
+ .note.GNU-stack
+                0x00000000        0x0 C:/usr/xtensa/XtDevTools/install/builds/RI-2021.8-win32/Hifi5_MT2833_FDI_FINAL/xtensa-elf/lib/xcc/crtbegin.o
+ .note.GNU-stack
+                0x00000000        0x0 Build/source/source/updn_sampling.picsl.o
+ .note.GNU-stack
+                0x00000000        0x0 C:/usr/xtensa/XtDevTools/install/builds/RI-2021.8-win32/Hifi5_MT2833_FDI_FINAL/xtensa-elf/lib/xcc/crtend.o
+
+Linker script and memory map
+
+LOAD C:/usr/xtensa/XtDevTools/install/builds/RI-2021.8-win32/Hifi5_MT2833_FDI_FINAL/xtensa-elf/lib/xcc/crti.o
+LOAD C:/usr/xtensa/XtDevTools/install/builds/RI-2021.8-win32/Hifi5_MT2833_FDI_FINAL/xtensa-elf/lib/xcc/crtbegin.o
+LOAD Build/source/source/main_lib.picsl.o
+LOAD Build/source/source/updn_sampling.picsl.o
+LOAD Build/source/source/samplerbyn_xt_memory.picsl.o
+LOAD C:/usr/xtensa/XtDevTools/install/builds/RI-2021.8-win32/Hifi5_MT2833_FDI_FINAL/xtensa-elf/lib/xcc/\libgcc.a
+LOAD C:/usr/xtensa/XtDevTools/install/builds/RI-2021.8-win32/Hifi5_MT2833_FDI_FINAL/xtensa-elf/lib/xcc/\libgcc.a
+LOAD C:/usr/xtensa/XtDevTools/install/builds/RI-2021.8-win32/Hifi5_MT2833_FDI_FINAL/xtensa-elf/lib/xcc/crtend.o
+LOAD C:/usr/xtensa/XtDevTools/install/builds/RI-2021.8-win32/Hifi5_MT2833_FDI_FINAL/xtensa-elf/lib/xcc/crtn.o
+
+.text           0x00000000      0x759
+                0x00000000                _text_start = ABSOLUTE (.)
+ *(.got.plt* .plt*)
+ .got.plt       0x00000000        0x0 C:/usr/xtensa/XtDevTools/install/builds/RI-2021.8-win32/Hifi5_MT2833_FDI_FINAL/xtensa-elf/lib/xcc/crti.o
+                0x00000000                _GLOBAL_OFFSET_TABLE_
+ .init.literal  0x00000000        0x4 C:/usr/xtensa/XtDevTools/install/builds/RI-2021.8-win32/Hifi5_MT2833_FDI_FINAL/xtensa-elf/lib/xcc/crtbegin.o
+ .init.literal  0x00000004        0x4 C:/usr/xtensa/XtDevTools/install/builds/RI-2021.8-win32/Hifi5_MT2833_FDI_FINAL/xtensa-elf/lib/xcc/crtend.o
+ .literal       0x00000008       0x14 C:/usr/xtensa/XtDevTools/install/builds/RI-2021.8-win32/Hifi5_MT2833_FDI_FINAL/xtensa-elf/lib/xcc/crtbegin.o
+                                         0x20 (size before relaxing)
+ .literal       0x0000001c       0x28 Build/source/source/main_lib.picsl.o
+ .literal       0x00000044       0x24 Build/source/source/updn_sampling.picsl.o
+                                         0x2c (size before relaxing)
+ .literal       0x00000068        0x4 C:/usr/xtensa/XtDevTools/install/builds/RI-2021.8-win32/Hifi5_MT2833_FDI_FINAL/xtensa-elf/lib/xcc/crtend.o
+ .fini.literal  0x0000006c        0x4 C:/usr/xtensa/XtDevTools/install/builds/RI-2021.8-win32/Hifi5_MT2833_FDI_FINAL/xtensa-elf/lib/xcc/crtbegin.o
+ .plt           0x00000070        0x0 C:/usr/xtensa/XtDevTools/install/builds/RI-2021.8-win32/Hifi5_MT2833_FDI_FINAL/xtensa-elf/lib/xcc/crti.o
+ *(.init.literal)
+ *(.init)
+ .init          0x00000070        0x3 C:/usr/xtensa/XtDevTools/install/builds/RI-2021.8-win32/Hifi5_MT2833_FDI_FINAL/xtensa-elf/lib/xcc/crti.o
+                0x00000070                _init
+ .init          0x00000073        0x8 C:/usr/xtensa/XtDevTools/install/builds/RI-2021.8-win32/Hifi5_MT2833_FDI_FINAL/xtensa-elf/lib/xcc/crtbegin.o
+ .init          0x0000007b        0x8 C:/usr/xtensa/XtDevTools/install/builds/RI-2021.8-win32/Hifi5_MT2833_FDI_FINAL/xtensa-elf/lib/xcc/crtend.o
+ .init          0x00000083        0x2 C:/usr/xtensa/XtDevTools/install/builds/RI-2021.8-win32/Hifi5_MT2833_FDI_FINAL/xtensa-elf/lib/xcc/crtn.o
+ *(.literal .text .stub .literal.* .text.* .gnu.linkonce.literal.* .gnu.linkonce.t.*.literal .gnu.linkonce.t.*)
+ *fill*         0x00000085        0x3 00000000
+ .text          0x00000088       0x4e C:/usr/xtensa/XtDevTools/install/builds/RI-2021.8-win32/Hifi5_MT2833_FDI_FINAL/xtensa-elf/lib/xcc/crtbegin.o
+ *fill*         0x000000d6        0xa 00000000
+ .text          0x000000e0       0x39 Build/source/source/main_lib.picsl.o
+                0x000000e0                _start
+ *fill*         0x00000119        0x7 00000000
+ .text          0x00000120      0x57d Build/source/source/updn_sampling.picsl.o
+                0x00000120                get_sampler_by_n_version
+                0x00000128                updn_sampling_Init
+                0x00000168                updn_sampling_by2_Proc_V2
+                0x000003b4                updn_sampling_by3_Proc
+                0x0000061c                updn_sampling_16bit_Proc
+                0x00000660                updn_sampling_32bit_Proc
+ *fill*         0x0000069d        0x3 00000000
+ .text          0x000006a0       0x23 C:/usr/xtensa/XtDevTools/install/builds/RI-2021.8-win32/Hifi5_MT2833_FDI_FINAL/xtensa-elf/lib/xcc/crtend.o
+ .text          0x000006c3        0x0 C:/usr/xtensa/XtDevTools/install/builds/RI-2021.8-win32/Hifi5_MT2833_FDI_FINAL/xtensa-elf/lib/xcc/crti.o
+ *fill*         0x000006c3        0x0 00000000
+ *fill*         0x000006c3        0x0 00000000
+ *fill*         0x000006c3        0x0 00000000
+ *fill*         0x000006c3        0x0 00000000
+ *fill*         0x000006c3        0x0 00000000
+ *fill*         0x000006c3        0x1 00000000
+ .literal       0x000006c4        0x0 Build/source/source/samplerbyn_xt_memory.picsl.o
+ *fill*         0x000006c4        0xc 00000000
+ .text          0x000006d0       0x7c Build/source/source/samplerbyn_xt_memory.picsl.o
+                0x000006d0                xt_hifi5_sampler_by_n_memset
+                0x000006f4                xt_hifi5_sampler_by_n_memcpy
+ .text          0x0000074c        0x0 C:/usr/xtensa/XtDevTools/install/builds/RI-2021.8-win32/Hifi5_MT2833_FDI_FINAL/xtensa-elf/lib/xcc/crtn.o
+ *(.clib.literal .clib.text)
+ *(.text.*personality*)
+ *(.gnu.warning)
+ *(.fini.literal)
+ *fill*         0x0000074c        0x0 00000000
+ *(.fini)
+ .fini          0x0000074c        0x3 C:/usr/xtensa/XtDevTools/install/builds/RI-2021.8-win32/Hifi5_MT2833_FDI_FINAL/xtensa-elf/lib/xcc/crti.o
+                0x0000074c                _fini
+ .fini          0x0000074f        0x8 C:/usr/xtensa/XtDevTools/install/builds/RI-2021.8-win32/Hifi5_MT2833_FDI_FINAL/xtensa-elf/lib/xcc/crtbegin.o
+ .fini          0x00000757        0x2 C:/usr/xtensa/XtDevTools/install/builds/RI-2021.8-win32/Hifi5_MT2833_FDI_FINAL/xtensa-elf/lib/xcc/crtn.o
+                [!provide]                        PROVIDE (__etext = .)
+                [!provide]                        PROVIDE (_etext = .)
+                [!provide]                        PROVIDE (etext = .)
+
+.dynamic        0x0000075c       0xa8
+                0x0000075c        0x4 LONG 0x70000002
+                0x00000760        0x4 LONG 0x0 _text_start
+ *(.dynamic)
+ .dynamic       0x00000764       0xa0 C:/usr/xtensa/XtDevTools/install/builds/RI-2021.8-win32/Hifi5_MT2833_FDI_FINAL/xtensa-elf/lib/xcc/crti.o
+                0x00000764                _DYNAMIC
+
+.hash           0x00000804       0x10
+ *(.hash)
+ .hash          0x00000804       0x10 C:/usr/xtensa/XtDevTools/install/builds/RI-2021.8-win32/Hifi5_MT2833_FDI_FINAL/xtensa-elf/lib/xcc/crti.o
+
+.dynsym         0x00000814       0x10
+ *(.dynsym)
+ .dynsym        0x00000814       0x10 C:/usr/xtensa/XtDevTools/install/builds/RI-2021.8-win32/Hifi5_MT2833_FDI_FINAL/xtensa-elf/lib/xcc/crti.o
+
+.dynstr         0x00000824        0x1
+ *(.dynstr)
+ .dynstr        0x00000824        0x1 C:/usr/xtensa/XtDevTools/install/builds/RI-2021.8-win32/Hifi5_MT2833_FDI_FINAL/xtensa-elf/lib/xcc/crti.o
+
+.gnu.version    0x00000826        0x0
+ *(.gnu.version)
+ .gnu.version   0x00000826        0x0 C:/usr/xtensa/XtDevTools/install/builds/RI-2021.8-win32/Hifi5_MT2833_FDI_FINAL/xtensa-elf/lib/xcc/crti.o
+
+.gnu.version_d  0x00000828        0x0
+ *(.gnu.version_d)
+ .gnu.version_d
+                0x00000828        0x0 C:/usr/xtensa/XtDevTools/install/builds/RI-2021.8-win32/Hifi5_MT2833_FDI_FINAL/xtensa-elf/lib/xcc/crti.o
+
+.gnu.version_r  0x00000828        0x0
+ *(.gnu.version_r)
+ .gnu.version_r
+                0x00000828        0x0 C:/usr/xtensa/XtDevTools/install/builds/RI-2021.8-win32/Hifi5_MT2833_FDI_FINAL/xtensa-elf/lib/xcc/crti.o
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text .rel.text.* .rel.gnu.linkonce.t.*)
+
+.rela.text
+ *(.rela.text .rela.text.* .rela.gnu.linkonce.t.*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata .rel.rodata.* .rel.gnu.linkonce.r.*)
+
+.rela.rodata
+ *(.rela.rodata .rela.rodata.* .rela.gnu.linkonce.r.*)
+
+.rel.data.rel.ro
+ *(.rel.data.rel.ro*)
+
+.rela.data.rel.ro
+ *(.rel.data.rel.ro*)
+
+.rel.data
+ *(.rel.data .rel.data.* .rel.gnu.linkonce.d.*)
+
+.rela.data
+ *(.rela.data .rela.data.* .rela.gnu.linkonce.d.*)
+
+.rel.tdata
+ *(.rel.tdata .rel.tdata.* .rel.gnu.linkonce.td.*)
+
+.rela.tdata
+ *(.rela.tdata .rela.tdata.* .rela.gnu.linkonce.td.*)
+
+.rel.tbss
+ *(.rel.tbss .rel.tbss.* .rel.gnu.linkonce.tb.*)
+
+.rela.tbss
+ *(.rela.tbss .rela.tbss.* .rela.gnu.linkonce.tb.*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got       0x00000828      0x168
+ *(.rela.got)
+ .rela.got      0x00000828      0x168 C:/usr/xtensa/XtDevTools/install/builds/RI-2021.8-win32/Hifi5_MT2833_FDI_FINAL/xtensa-elf/lib/xcc/crti.o
+
+.rel.bss
+ *(.rel.bss .rel.bss.* .rel.gnu.linkonce.b.*)
+
+.rela.bss
+ *(.rela.bss .rela.bss.* .rela.gnu.linkonce.b.*)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt       0x00000990        0x0
+ *(.rela.plt)
+ .rela.plt      0x00000990        0x0 C:/usr/xtensa/XtDevTools/install/builds/RI-2021.8-win32/Hifi5_MT2833_FDI_FINAL/xtensa-elf/lib/xcc/crti.o
+
+.got            0x00000990        0x4
+ *(.got)
+ .got           0x00000990        0x4 C:/usr/xtensa/XtDevTools/install/builds/RI-2021.8-win32/Hifi5_MT2833_FDI_FINAL/xtensa-elf/lib/xcc/crti.o
+
+.got.loc        0x00000994       0x38
+ *(.got.loc)
+ .got.loc       0x00000994       0x38 C:/usr/xtensa/XtDevTools/install/builds/RI-2021.8-win32/Hifi5_MT2833_FDI_FINAL/xtensa-elf/lib/xcc/crti.o
+
+.clib.rodata
+ *(.clib.rodata)
+
+.rtos.rodata
+ *(.rtos.rodata)
+
+.clib.data
+ *(.clib.data)
+
+.rtos.data
+ *(.rtos.data)
+
+.clib.percpu.data
+ *(.clib.percpu.data)
+
+.rtos.percpu.data
+ *(.rtos.percpu.data)
+
+.rodata         0x000009cc       0x7b
+ *(.rodata .rodata.* .gnu.linkonce.r.*)
+ .rodata.str1.4
+                0x000009cc       0x7b Build/source/source/main_lib.picsl.o
+
+.interp         0x00000a47        0xb
+ .interp        0x00000a47        0xb C:/usr/xtensa/XtDevTools/install/builds/RI-2021.8-win32/Hifi5_MT2833_FDI_FINAL/xtensa-elf/lib/xcc/crti.o
+
+.rodata1
+ *(.rodata1)
+
+.xt_except_table
+ *(.xt_except_table)
+
+.eh_frame       0x00000a54        0x4
+ *(.eh_frame)
+ .eh_frame      0x00000a54        0x0 C:/usr/xtensa/XtDevTools/install/builds/RI-2021.8-win32/Hifi5_MT2833_FDI_FINAL/xtensa-elf/lib/xcc/crtbegin.o
+ .eh_frame      0x00000a54        0x4 C:/usr/xtensa/XtDevTools/install/builds/RI-2021.8-win32/Hifi5_MT2833_FDI_FINAL/xtensa-elf/lib/xcc/crtend.o
+
+.gcc_except_table
+ *(.gcc_except_table)
+ *(.gcc_except_table.*)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table)
+ *(.gcc_except_table.*)
+
+.tdata
+ *(.tdata .tdata.* .gnu.linkonce.td.*)
+
+.tbss
+ *(.tbss .tbss.* .gnu.linkonce.tb.*)
+ *(.tcommon)
+                0x00000a58                . = ALIGN (0x4)
+                [!provide]                        PROVIDE (__preinit_array_start = .)
+
+.preinit_array
+ *(.preinit_array)
+                [!provide]                        PROVIDE (__preinit_array_end = .)
+                [!provide]                        PROVIDE (__init_array_start = .)
+
+.init_array
+ *(.init_array)
+                [!provide]                        PROVIDE (__init_array_end = .)
+                [!provide]                        PROVIDE (__fini_array_start = .)
+
+.fini_array
+ *(.fini_array)
+                [!provide]                        PROVIDE (__fini_array_end = .)
+
+.ctors          0x00000a58        0x8
+ *crtbegin*.o(.ctors)
+ .ctors         0x00000a58        0x4 C:/usr/xtensa/XtDevTools/install/builds/RI-2021.8-win32/Hifi5_MT2833_FDI_FINAL/xtensa-elf/lib/xcc/crtbegin.o
+ *(EXCLUDE_FILE(*crtend*.o) .ctors)
+ *(SORT_BY_NAME(.ctors.*))
+ *(.ctors)
+ .ctors         0x00000a5c        0x4 C:/usr/xtensa/XtDevTools/install/builds/RI-2021.8-win32/Hifi5_MT2833_FDI_FINAL/xtensa-elf/lib/xcc/crtend.o
+
+.dtors          0x00000a60        0x8
+ *crtbegin*.o(.dtors)
+ .dtors         0x00000a60        0x4 C:/usr/xtensa/XtDevTools/install/builds/RI-2021.8-win32/Hifi5_MT2833_FDI_FINAL/xtensa-elf/lib/xcc/crtbegin.o
+ *(EXCLUDE_FILE(*crtend*.o) .dtors)
+ *(SORT_BY_NAME(.dtors.*))
+ *(.dtors)
+ .dtors         0x00000a64        0x4 C:/usr/xtensa/XtDevTools/install/builds/RI-2021.8-win32/Hifi5_MT2833_FDI_FINAL/xtensa-elf/lib/xcc/crtend.o
+
+.jcr
+ *(.jcr)
+
+.data.rel.ro
+ *(.data.rel.ro.local)
+ *(.data.rel.ro*)
+
+.data           0x00000a70       0x40
+ *(.data .data.* .gnu.linkonce.d.*)
+ .data          0x00000a70        0x0 C:/usr/xtensa/XtDevTools/install/builds/RI-2021.8-win32/Hifi5_MT2833_FDI_FINAL/xtensa-elf/lib/xcc/crti.o
+ .data          0x00000a70       0x24 C:/usr/xtensa/XtDevTools/install/builds/RI-2021.8-win32/Hifi5_MT2833_FDI_FINAL/xtensa-elf/lib/xcc/crtbegin.o
+                0x00000a70                __dso_handle
+ *fill*         0x00000a94        0xc 
+ .data          0x00000aa0       0x10 Build/source/source/main_lib.picsl.o
+                0x00000aa0                export_parameter_array
+ .data          0x00000ab0        0x0 Build/source/source/updn_sampling.picsl.o
+ .data          0x00000ab0        0x0 Build/source/source/samplerbyn_xt_memory.picsl.o
+ .data          0x00000ab0        0x0 C:/usr/xtensa/XtDevTools/install/builds/RI-2021.8-win32/Hifi5_MT2833_FDI_FINAL/xtensa-elf/lib/xcc/crtend.o
+ .data          0x00000ab0        0x0 C:/usr/xtensa/XtDevTools/install/builds/RI-2021.8-win32/Hifi5_MT2833_FDI_FINAL/xtensa-elf/lib/xcc/crtn.o
+ *(.gnu.linkonce.d.*personality*)
+
+.data1
+ *(.data1)
+
+.xt_except_desc
+ *(.xt_except_desc .gnu.linkonce.h.*)
+ *(.xt_except_desc_end)
+                0x00000ab0                _edata = .
+                [!provide]                        PROVIDE (edata = .)
+                0x00000ab0                __bss_start = .
+
+.bss            0x00000ab0        0x4
+ *(.dynbss)
+ *(.bss .bss.* .gnu.linkonce.b.*)
+ .bss           0x00000ab0        0x0 C:/usr/xtensa/XtDevTools/install/builds/RI-2021.8-win32/Hifi5_MT2833_FDI_FINAL/xtensa-elf/lib/xcc/crti.o
+ .bss           0x00000ab0        0x0 C:/usr/xtensa/XtDevTools/install/builds/RI-2021.8-win32/Hifi5_MT2833_FDI_FINAL/xtensa-elf/lib/xcc/crtbegin.o
+ .bss           0x00000ab0        0x4 Build/source/source/main_lib.picsl.o
+                0x00000ab0                printf_ptr
+ .bss           0x00000ab4        0x0 Build/source/source/updn_sampling.picsl.o
+ .bss           0x00000ab4        0x0 Build/source/source/samplerbyn_xt_memory.picsl.o
+ .bss           0x00000ab4        0x0 C:/usr/xtensa/XtDevTools/install/builds/RI-2021.8-win32/Hifi5_MT2833_FDI_FINAL/xtensa-elf/lib/xcc/crtend.o
+ .bss           0x00000ab4        0x0 C:/usr/xtensa/XtDevTools/install/builds/RI-2021.8-win32/Hifi5_MT2833_FDI_FINAL/xtensa-elf/lib/xcc/crtn.o
+ *(.clib.bss)
+ *(.clib.percpu.bss)
+ *(.rtos.bss)
+ *(.rtos.percpu.bss)
+ *(COMMON)
+                0x00000ab4                . = ALIGN (0x4)
+                0x00000ab4                . = ALIGN (0x4)
+                0x00000ab4                _end = .
+                [!provide]                        PROVIDE (end = .)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x00000000       0xe4
+ *(.comment)
+ .comment       0x00000000       0x28 C:/usr/xtensa/XtDevTools/install/builds/RI-2021.8-win32/Hifi5_MT2833_FDI_FINAL/xtensa-elf/lib/xcc/crtbegin.o
+                                         0x29 (size before relaxing)
+ .comment       0x00000028       0x58 Build/source/source/main_lib.picsl.o
+                                         0x59 (size before relaxing)
+ .comment       0x00000080       0x29 Build/source/source/updn_sampling.picsl.o
+ .comment       0x00000080       0x64 Build/source/source/samplerbyn_xt_memory.picsl.o
+                                         0x65 (size before relaxing)
+ .comment       0x000000e4       0x29 C:/usr/xtensa/XtDevTools/install/builds/RI-2021.8-win32/Hifi5_MT2833_FDI_FINAL/xtensa-elf/lib/xcc/crtend.o
+
+.xtensa.info    0x00000000      0x1f4
+ .xtensa.info   0x00000000      0x1f4 C:/usr/xtensa/XtDevTools/install/builds/RI-2021.8-win32/Hifi5_MT2833_FDI_FINAL/xtensa-elf/lib/xcc/crti.o
+ .xtensa.info   0x000001f4        0x0 C:/usr/xtensa/XtDevTools/install/builds/RI-2021.8-win32/Hifi5_MT2833_FDI_FINAL/xtensa-elf/lib/xcc/crtbegin.o
+ .xtensa.info   0x000001f4        0x0 Build/source/source/main_lib.picsl.o
+ .xtensa.info   0x000001f4        0x0 Build/source/source/updn_sampling.picsl.o
+ .xtensa.info   0x000001f4        0x0 Build/source/source/samplerbyn_xt_memory.picsl.o
+ .xtensa.info   0x000001f4        0x0 C:/usr/xtensa/XtDevTools/install/builds/RI-2021.8-win32/Hifi5_MT2833_FDI_FINAL/xtensa-elf/lib/xcc/crtend.o
+ .xtensa.info   0x000001f4        0x0 C:/usr/xtensa/XtDevTools/install/builds/RI-2021.8-win32/Hifi5_MT2833_FDI_FINAL/xtensa-elf/lib/xcc/crtn.o
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000       0x40
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x20 Build/source/source/main_lib.picsl.o
+ .debug_aranges
+                0x00000020       0x20 Build/source/source/samplerbyn_xt_memory.picsl.o
+
+.debug_pubnames
+                0x00000000       0x9b
+ *(.debug_pubnames)
+ .debug_pubnames
+                0x00000000       0x47 Build/source/source/main_lib.picsl.o
+ .debug_pubnames
+                0x00000047       0x54 Build/source/source/samplerbyn_xt_memory.picsl.o
+
+.debug_info     0x00000000      0xb83
+ *(.debug_info .gnu.linkonce.wi.*)
+ .debug_info    0x00000000      0x1be Build/source/source/main_lib.picsl.o
+ .debug_info    0x000001be      0x7fc Build/source/source/updn_sampling.picsl.o
+ .debug_info    0x000009ba      0x1c9 Build/source/source/samplerbyn_xt_memory.picsl.o
+
+.debug_abbrev   0x00000000      0x2c3
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000       0xaa Build/source/source/main_lib.picsl.o
+ .debug_abbrev  0x000000aa      0x177 Build/source/source/updn_sampling.picsl.o
+ .debug_abbrev  0x00000221       0xa2 Build/source/source/samplerbyn_xt_memory.picsl.o
+
+.debug_line     0x00000000      0x5dc
+ *(.debug_line)
+ .debug_line    0x00000000       0x90 Build/source/source/main_lib.picsl.o
+ .debug_line    0x00000090      0x480 Build/source/source/updn_sampling.picsl.o
+ .debug_line    0x00000510       0xcc Build/source/source/samplerbyn_xt_memory.picsl.o
+
+.debug_frame    0x00000000       0x8c
+ *(.debug_frame)
+ .debug_frame   0x00000000       0x8c Build/source/source/updn_sampling.picsl.o
+
+.debug_str      0x00000000      0x505
+ *(.debug_str)
+ .debug_str     0x00000000      0x505 Build/source/source/updn_sampling.picsl.o
+                                        0x53d (size before relaxing)
+
+.debug_loc      0x00000000      0x2e4
+ *(.debug_loc)
+ .debug_loc     0x00000000      0x2e4 Build/source/source/updn_sampling.picsl.o
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.xt.lit         0x00000000       0x38
+ *(.xt.lit .xt.lit.* .gnu.linkonce.p.*)
+ .xt.lit.plt    0x00000000        0x0 C:/usr/xtensa/XtDevTools/install/builds/RI-2021.8-win32/Hifi5_MT2833_FDI_FINAL/xtensa-elf/lib/xcc/crti.o
+ .xt.lit        0x00000000       0x18 C:/usr/xtensa/XtDevTools/install/builds/RI-2021.8-win32/Hifi5_MT2833_FDI_FINAL/xtensa-elf/lib/xcc/crtbegin.o
+ .xt.lit        0x00000018        0x8 Build/source/source/main_lib.picsl.o
+ .xt.lit        0x00000020        0x8 Build/source/source/updn_sampling.picsl.o
+ .xt.lit        0x00000028       0x10 C:/usr/xtensa/XtDevTools/install/builds/RI-2021.8-win32/Hifi5_MT2833_FDI_FINAL/xtensa-elf/lib/xcc/crtend.o
+
+.xt.insn
+ *(.xt.insn .gnu.linkonce.x.*)
+
+.xt.prop        0x00000000      0x51c
+ *(.xt.prop .gnu.linkonce.prop.*)
+ .xt.prop       0x00000000       0x30 C:/usr/xtensa/XtDevTools/install/builds/RI-2021.8-win32/Hifi5_MT2833_FDI_FINAL/xtensa-elf/lib/xcc/crti.o
+ .xt.prop       0x00000030       0xd8 C:/usr/xtensa/XtDevTools/install/builds/RI-2021.8-win32/Hifi5_MT2833_FDI_FINAL/xtensa-elf/lib/xcc/crtbegin.o
+ .xt.prop       0x00000108       0x24 Build/source/source/main_lib.picsl.o
+                                         0x3c (size before relaxing)
+ .xt.prop       0x0000012c      0x27c Build/source/source/updn_sampling.picsl.o
+ .xt.prop       0x000003a8       0xe4 Build/source/source/samplerbyn_xt_memory.picsl.o
+                                         0xf0 (size before relaxing)
+ .xt.prop       0x0000048c       0x60 C:/usr/xtensa/XtDevTools/install/builds/RI-2021.8-win32/Hifi5_MT2833_FDI_FINAL/xtensa-elf/lib/xcc/crtend.o
+ .xt.prop       0x000004ec       0x30 C:/usr/xtensa/XtDevTools/install/builds/RI-2021.8-win32/Hifi5_MT2833_FDI_FINAL/xtensa-elf/lib/xcc/crtn.o
+
+/DISCARD/
+ *(.note.GNU-stack)
+OUTPUT(Build/lib/pisplit_sampler_by_n_position_independent.splitload.lib elf32-xtensa-le)
+
+Memory Configuration
+
+Name             Origin          Length          Used            Unused          Attributes
+*default*        0x00000000      0xffffffff      
