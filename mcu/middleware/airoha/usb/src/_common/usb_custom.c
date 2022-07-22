@@ -117,7 +117,7 @@ static const char usb_string_hid[] __unused = "Airoha HID";
 #ifdef AIR_USB_DONGLE_PROJECT_ENABLE
 static const char usb_string_audio1[] __unused = "AIROHA Dongle Chat";
 #else
-static const char usb_string_audio1[] __unused = "AIROHA Chat";
+static const char usb_string_audio1[] __unused = "TYM AIROHA Chat";
 #endif
 #else /*only one speaker*/
 static const char usb_string_audio1[] __unused = "AIROHA Speaker";
