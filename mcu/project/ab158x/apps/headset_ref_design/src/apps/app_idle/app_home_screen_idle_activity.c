@@ -853,7 +853,7 @@ static bool _proc_key_event_group(ui_shell_activity_t *self,
                 app_swift_pair_start_adv();
 #endif
 
-                app_swift_pair_start_adv
+                printf("TYM_PAIRING_HAL\r\n");
 
                 app_bt_state_service_set_bt_visible(true, false, VISIBLE_TIMEOUT);
                 memset((void *)&vp, 0, sizeof(voice_prompt_param_t));
