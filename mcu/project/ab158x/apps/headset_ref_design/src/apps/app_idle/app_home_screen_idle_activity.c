@@ -597,16 +597,122 @@ static bool _proc_key_event_group(ui_shell_activity_t *self,
         action = apps_config_key_event_remapper_map_action(key_id, key_event);
     }
 
+    printf("TYM_1_KEY: %d, %d\r\n", key_id, key_event);
+    typedef enum {
+        xeKID_PWR = 24,
+        xeKID_13 = 126,
+        xeKID_14 = 127,
+        xeKID_15 = 128,
+        xeKID_16 = 129,
+    } xe_KeyID;
+	
+    switch(key_id) {
+        case xeKID_PWR:
+            switch(key_event) {
+                case 1:
+                    break;
+					
+                case 2:
+                    break;
+					
+                case 3:
+                    break;
+					
+                default:
+                    break;
+            }
+            break;
+			
+        case xeKID_13:
+            switch(key_event) {
+                case 1:
+                    break;
+					
+                case 2:
+                    break;
+					
+                case 3:
+                    break;
+					
+                default:
+                    break;
+            }
+            break;
+			
+        case xeKID_14:
+            switch(key_event) {
+                case 1:
+                    break;
+					
+                case 2:
+                    break;
+					
+                case 3:
+                    break;
+					
+                default:
+                    break;
+            }
+            break;
+			
+        case xeKID_15:
+            switch(key_event) {
+                case 1:
+                    action = KEY_PASS_THROUGH;
+                    break;
+					
+                case 2:
+		 action = KEY_ANC;	
+                    break;
+					
+                case 3:
+                    break;
+					
+                default:
+                    break;
+            }
+            break;
+			
+        case xeKID_16:
+            switch(key_event) {
+                case 1:
+		 action = KEY_VOICE_UP;
+                    break;
+					
+                case 2:
+                    action = KEY_VOICE_DN;
+                    break;
+					
+                case 3:
+                    break;
+					
+                default:
+                    break;
+            }
+            break;
+
+        default:
+            break;
+    }
+
     switch(action) {
         case KEY_DISCOVERABLE:                        //= 0x0002,  /**< Start BT discoverable. */
         case KEY_CANCEL_DISCOVERABLE:                 //= 0x0003,  /**< Set bt to invisible. */
 
         case KEY_VOICE_UP:                            //= 0x000A,  /**< Volume up. */
             printf("TYM_Key_Vol+\r\n");
+
+            //apps_config_state_t sta = apps_config_key_get_mmi_state();
+            //USB_AUDIO_LOG_I("activity volue up, sta=%d", 1, sta);
+            USB_Audio_HID_VolumeUp(1);
             break;
 
         case KEY_VOICE_DN:                            //= 0x000B,  /**< Volume down. */
             printf("TYM_Key_Vol-\r\n");
+
+            //apps_config_state_t sta = apps_config_key_get_mmi_state();
+            //USB_AUDIO_LOG_I("activity volue down, sta=%d", 1, sta);
+            USB_Audio_HID_VolumeDown(1);
             break;
 
         case KEY_BT_OFF:                              //= 0x0016,  /**< BT off. */
@@ -653,7 +759,13 @@ static bool _proc_key_event_group(ui_shell_activity_t *self,
         case KEY_AVRCP_FAST_REWIND_RELEASE:           //= 0x005F,  /**< When playing music, fast rewind end. */
 
         case KEY_PASS_THROUGH:                        //= 0x0090,  /**< Passthrough on and off */
+            printf("TYM_KEY_PASS_THROUGH\r\n");
+            break;
+			
         case KEY_ANC:                                 //= 0x0091,  /**< ANC on and off */
+            printf("TYM_KEY_ANC\r\n");
+            break;
+		
         case KEY_SWITCH_ANC_AND_PASSTHROUGH:          //= 0x0092,  /**< Switch sequence is: All off->Passthrough on->ANC on */
         case KEY_BETWEEN_ANC_PASSTHROUGH:             //= 0x0093,  /**< Switch between ANC on and Passthrough on. */
         case KEY_ADVANCED_PASSTHROUGH_SWITCH:         //= 0x0094,  /**< Switch hearing aid. */
@@ -956,7 +1068,7 @@ static bool _proc_key_event_group(ui_shell_activity_t *self,
             }
             ret = true;
             break;
-#ifdef MTK_ANC_ENABLE
+#if(1)//def MTK_ANC_ENABLE
         case KEY_PASS_THROUGH:
         case KEY_ANC:
         case KEY_SWITCH_ANC_AND_PASSTHROUGH:
