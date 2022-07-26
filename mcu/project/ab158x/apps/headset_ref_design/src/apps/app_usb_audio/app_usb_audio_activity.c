@@ -100,6 +100,102 @@ static bool _proc_key_event_group(ui_shell_activity_t *self,
 #endif
     action = apps_config_key_event_remapper_map_action_in_temp_state(key_id, key_event, APP_WIRED_MUSIC_PLAY);
 
+    printf("TYM_2_KEY: %d, %d\r\n", key_id, key_event);
+    typedef enum {
+        xeKID_PWR = 24,
+        xeKID_13 = 126,
+        xeKID_14 = 127,
+        xeKID_15 = 128,
+        xeKID_16 = 129,
+    } xe_KeyID;
+	
+    switch(key_id) {
+        case xeKID_PWR:
+            switch(key_event) {
+                case 1:
+                    break;
+					
+                case 2:
+                    break;
+					
+                case 3:
+                    break;
+					
+                default:
+                    break;
+            }
+            break;
+			
+        case xeKID_13:
+            switch(key_event) {
+                case 1:
+                    break;
+					
+                case 2:
+                    break;
+					
+                case 3:
+                    break;
+					
+                default:
+                    break;
+            }
+            break;
+			
+        case xeKID_14:
+            switch(key_event) {
+                case 1:
+                    break;
+					
+                case 2:
+                    break;
+					
+                case 3:
+                    break;
+					
+                default:
+                    break;
+            }
+            break;
+			
+        case xeKID_15:
+            switch(key_event) {
+                case 1:
+                    break;
+					
+                case 2:
+                    break;
+					
+                case 3:
+                    break;
+					
+                default:
+                    break;
+            }
+            break;
+			
+        case xeKID_16:
+            switch(key_event) {
+                case 1:
+		 action = KEY_VOICE_UP;
+                    break;
+					
+                case 2:
+                    action = KEY_VOICE_DN;
+                    break;
+					
+                case 3:
+                    break;
+					
+                default:
+                    break;
+            }
+            break;
+
+        default:
+            break;
+    }
+
     switch (action) {
         case KEY_AVRCP_BACKWARD:
             USB_AUDIO_LOG_I("activity backward", 0);
