@@ -1518,6 +1518,9 @@ uint32_t audio_get_gain_out_in_dB(uint8_t level, gain_type_t gainType, vol_type_
     } else {
         gian_dB = audio_get_uint32_value(pGainTable + 2 + (index * 4)); //analog out gain value is 32 bits.
     }
+
+    printf("TYM BT\r\n");
+	
     audio_src_srv_report("[Sink][Setting]audio_get_gain_out_in_dB Type:%d Level[%d] Percentage:%d index:%d (%c) Gain:0x%x\n", 6, volType, level, percentage, index, (gainType == GAIN_DIGITAL) ? 'D' : 'A', gian_dB);
 
     vPortFree(pGainTable);

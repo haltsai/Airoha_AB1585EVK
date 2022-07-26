@@ -209,6 +209,9 @@ static bool app_music_proc_rotary_event_group(ui_shell_activity_t *self,
     }
     apps_config_key_action_t key_action = *(uint16_t *)extra_data;
     app_event_rotary_event_decode(&port, &event, &rotary_data, event_id);
+
+    printf("TYM BT1\r\n");
+
     switch (key_action) {
         case KEY_VOICE_UP:
         case KEY_VOICE_DN: {
@@ -514,6 +517,9 @@ bool app_music_activity_proc(ui_shell_activity_t *self,
                              size_t data_len)
 {
     bool ret = false;
+
+    printf("TYM BT KEY app activity \r\n");
+
     switch (event_group) {
         case EVENT_GROUP_UI_SHELL_SYSTEM: {
             /* UI Shell internal events, please refer to doc/Airoha_IoT_SDK_UI_Framework_Developers_Guide.pdf. */

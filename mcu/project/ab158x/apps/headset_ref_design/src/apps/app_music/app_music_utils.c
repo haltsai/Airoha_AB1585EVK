@@ -110,6 +110,8 @@ static bool app_music_do_music_actions(bool from_aws_data, ui_shell_activity_t *
     APPS_LOG_MSGID_I(APP_MUSIC_UTILS" app_music_do_music_action key_action=0x%x, avrcp_op_sta=%d", 2,
                      action, local_context->avrcp_op_sta);
 
+    printf("TYM BT4A\r\n");
+
     /* Map key action to sink service action. */
     switch (action) {
         case KEY_AVRCP_PLAY:
@@ -222,6 +224,9 @@ static bool app_music_do_music_actions(bool from_aws_data, ui_shell_activity_t *
         || app_ull_is_le_ull_connected()
         #endif
         ) {
+
+        printf("TYM BT4B\r\n");
+
         if (BT_SINK_SRV_ACTION_VOLUME_UP == sink_action
             || BT_SINK_SRV_ACTION_VOLUME_DOWN == sink_action) {
             bt_ull_volume_t volume_param;
@@ -366,6 +371,8 @@ apps_config_key_action_t app_music_utils_proc_key_events(ui_shell_activity_t *se
 
     /* Decode event_id to key_id and key_event. */
     app_event_key_event_decode(&key_id, &key_event, event_id);
+
+    printf("TYM Key2 BT %d %d \r\n", key_id, key_event);
 
     apps_config_key_action_t action;
 
@@ -567,6 +574,7 @@ bool app_music_idle_proc_aws_data_events(ui_shell_activity_t *self, uint32_t eve
                 ret = app_music_do_music_actions(TRUE, self, action);
             }
 #elif defined(AIR_LE_AUDIO_BIS_ENABLE)
+            printf("TYM BT 5 LE\r\n");
             ret = app_music_do_music_actions(TRUE, self, action);
 #endif
         }
